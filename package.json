@@ -1,0 +1,49 @@
+{
+    "name": "akasha.js",
+    "version": "1.0.0",
+    "description": "API wrapper for akasha.cv",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "run": "node dist/index.js",
+        "gen:openapi": "ts-node spec/genSpec.ts",
+        "gen:types": "openapi-typescript ./spec/openapi.yaml -o ./src/schema.ts",
+        "gen": "pnpm run gen:openapi && pnpm run gen:types",
+        "validate": "ts-node spec/validateSpec.ts",
+        "prepare": "husky"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "spec/openapi.yaml",
+        "LICENSE"
+    ],
+    "keywords": [
+        "Akasha",
+        "Genshin",
+        "Genshin Impact"
+    ],
+    "author": "QuantumPie",
+    "license": "MIT",
+    "devDependencies": {
+        "@commitlint/cli": "^19.5.0",
+        "@commitlint/config-conventional": "^19.5.0",
+        "@commitlint/types": "^19.5.0",
+        "@eslint/js": "^9.10.0",
+        "@types/js-yaml": "^4.0.9",
+        "@types/node": "^22.5.4",
+        "eslint": "^9.10.0",
+        "eslint-config-prettier": "^9.1.0",
+        "globals": "^15.9.0",
+        "har-to-openapi": "^2.1.0",
+        "husky": "^9.1.6",
+        "js-yaml": "^4.1.0",
+        "lint-staged": "^15.2.10",
+        "openapi-typescript": "^7.4.0",
+        "prettier": "^3.3.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.2",
+        "typescript-eslint": "^8.5.0"
+    }
+}
