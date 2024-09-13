@@ -3,12 +3,13 @@ import { readFileSync, writeFileSync } from 'fs'
 import { reduceExamples, setRequired } from './common'
 
 import YAML from 'js-yaml'
-;(async () => {
+
+(async () => {
     const profileHar = JSON.parse(
         readFileSync('./spec/akasha_profile.har').toString('utf-8')
     )
     // const leaderboardHar = JSON.parse(readFileSync('./spec/akasha_leaderboard.har').toString('utf-8'))
-    const { yamlSpec, domain, spec } = await generateSpec(profileHar, {
+    const { spec } = await generateSpec(profileHar, {
         attemptToParameterizeUrl: true,
         dropPathsWithoutSuccessfulResponse: true,
         urlFilter: /akasha\.cv\/api\/.*/,

@@ -1,8 +1,7 @@
 import { generateSpec } from 'har-to-openapi'
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync } from 'fs'
 import { reduceExamples, setRequired } from './common'
 import old_spec from './openapi.json'
-import { paths } from '../src/schema'
 
 function diffFlatten(
     oldFlat: Record<string, any>,
@@ -40,16 +39,18 @@ function flattenObject(obj: Record<string, any>) {
     return object
 }
 
-;(async () => {
+(async () => {
     const profileHar = JSON.parse(
         readFileSync('./spec/akasha_profile.har').toString('utf-8')
     )
+
     // const leaderboardHar = JSON.parse(readFileSync('./spec/akasha_leaderboard.har').toString('utf-8'))
     const { yamlSpec, domain, spec } = await generateSpec(profileHar, {
         attemptToParameterizeUrl: true,
         dropPathsWithoutSuccessfulResponse: true,
         urlFilter: /akasha\.cv\/api\/.*/,
     })
+
     // Reduce examples to no more than 2
     for (const [path, methods] of Object.entries(spec.paths)) {
         const examples =
