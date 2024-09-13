@@ -92,6 +92,23 @@ export interface paths {
         patch?: never
         trace?: never
     }
+    '/api/getCollectionSize': {
+        parameters: {
+            query?: never
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        /** Get Api Get Collection Size */
+        get: operations['getApiGetCollectionSize']
+        put?: never
+        post?: never
+        delete?: never
+        options?: never
+        head?: never
+        patch?: never
+        trace?: never
+    }
     '/api/getRelevantProfiles/{id}': {
         parameters: {
             query?: never
@@ -124,23 +141,6 @@ export interface paths {
         }
         /** Get Api User By ID */
         get: operations['getApiUserById']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/v2/notifications/topbar': {
-        parameters: {
-            query?: never
-            header?: never
-            path?: never
-            cookie?: never
-        }
-        /** Get Api V 2 Notifications Topbar */
-        get: operations['getApiV2NotificationsTopbar']
         put?: never
         post?: never
         delete?: never
@@ -183,10 +183,7 @@ export interface operations {
                 /** @description uid */
                 uid?: string
             }
-            header?: {
-                /** @description Cookie */
-                Cookie?: string
-            }
+            header?: never
             path?: never
             cookie?: never
         }
@@ -310,10 +307,7 @@ export interface operations {
                 /** @description uid */
                 uid?: string
             }
-            header?: {
-                /** @description Cookie */
-                Cookie?: string
-            }
+            header?: never
             path?: never
             cookie?: never
         }
@@ -507,10 +501,7 @@ export interface operations {
                 /** @description type */
                 type?: string
             }
-            header?: {
-                /** @description Cookie */
-                Cookie?: string
-            }
+            header?: never
             path?: never
             cookie?: never
         }
@@ -543,10 +534,7 @@ export interface operations {
                 /** @description type */
                 type?: string
             }
-            header?: {
-                /** @description Cookie */
-                Cookie?: string
-            }
+            header?: never
             path?: never
             cookie?: never
         }
@@ -576,10 +564,7 @@ export interface operations {
     getApiGetCalculationsForUserById: {
         parameters: {
             query?: never
-            header?: {
-                /** @description Cookie */
-                Cookie?: string
-            }
+            header?: never
             path: {
                 /** @example 605452914 */
                 id: number
@@ -696,14 +681,38 @@ export interface operations {
             }
         }
     }
+    getApiGetCollectionSize: {
+        parameters: {
+            query?: {
+                /** @description variant */
+                variant?: string
+                /** @description hash */
+                hash?: string
+            }
+            header?: never
+            path?: never
+            cookie?: never
+        }
+        requestBody?: never
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown
+                }
+                content: {
+                    'application/json': {
+                        totalRows: number
+                    }
+                }
+            }
+        }
+    }
     getApiGetRelevantProfilesById: {
         parameters: {
             query?: never
             header?: {
                 /** @description Authorization */
                 Authorization?: string
-                /** @description Cookie */
-                Cookie?: string
             }
             path: {
                 /** @example 605452914 */
@@ -804,8 +813,6 @@ export interface operations {
             header?: {
                 /** @description Authorization */
                 Authorization?: string
-                /** @description Cookie */
-                Cookie?: string
             }
             path: {
                 /** @example 605452914 */
@@ -894,31 +901,6 @@ export interface operations {
                             }
                         }
                         secret: unknown
-                        ttl: number
-                    }
-                }
-            }
-        }
-    }
-    getApiV2NotificationsTopbar: {
-        parameters: {
-            query?: never
-            header?: {
-                /** @description Cookie */
-                Cookie?: string
-            }
-            path?: never
-            cookie?: never
-        }
-        requestBody?: never
-        responses: {
-            200: {
-                headers: {
-                    [name: string]: unknown
-                }
-                content: {
-                    'application/json': {
-                        data: unknown[]
                         ttl: number
                     }
                 }

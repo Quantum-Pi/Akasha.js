@@ -1,7 +1,8 @@
 import { generateSpec } from 'har-to-openapi'
 import { readFileSync } from 'fs'
-import { reduceExamples, setRequired } from './common'
+import { getHAR, reduceExamples, setRequired } from './common'
 import old_spec from './openapi.json'
+import { run } from 'chrome-har-capturer'
 
 function diffFlatten(
     oldFlat: Record<string, any>,
@@ -28,6 +29,7 @@ function flattenObject(obj: Record<string, any>) {
 
     function dig(obj: Record<string, any>) {
         for (const [key, value] of Object.entries(obj)) {
+            if (key === 'example') return ''
             path.push(key)
             if (isObject(value)) dig(value)
             else object[path.join('.')] = value
@@ -39,13 +41,15 @@ function flattenObject(obj: Record<string, any>) {
     return object
 }
 
-(async () => {
-    const profileHar = JSON.parse(
-        readFileSync('./spec/akasha_profile.har').toString('utf-8')
-    )
+;(async () => {
+    const har = await getHAR([
+        'https://akasha.cv/profile/605452914',
+        // 'https://akasha.cv/leaderboards',
+        // 'https://akasha.cv/builds',
+        // 'https://akasha.cv/artifacts',
+    ])
 
-    // const leaderboardHar = JSON.parse(readFileSync('./spec/akasha_leaderboard.har').toString('utf-8'))
-    const { yamlSpec, domain, spec } = await generateSpec(profileHar, {
+    const { yamlSpec, domain, spec } = await generateSpec(har, {
         attemptToParameterizeUrl: true,
         dropPathsWithoutSuccessfulResponse: true,
         urlFilter: /akasha\.cv\/api\/.*/,

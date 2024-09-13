@@ -1,3 +1,5 @@
+import { run } from 'chrome-har-capturer'
+
 export const reduceExamples = (
     data: Record<string, any>,
     max_examples: number = 2
@@ -31,4 +33,43 @@ export const setRequired = (data: Record<string, any>) => {
         })
     }
     return data
+}
+
+export const getHAR = async (url: string[]) => {
+    return new Promise((res, rej) => {
+        const emitter = run(url, {
+            content: true,
+            retry: 3,
+            retryDelay: 10,
+            preHook: async (url, client) => {
+                try {
+                    const { Network } = client
+                    await Network.setUserAgentOverride({
+                        userAgent:
+                            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0',
+                    })
+                    await Network.setBlockedURLs({
+                        urls: [
+                            // 'https://www.googletagmanager.com/*',
+                            // 'https://akasha.cv/static*',
+                            // 'https://enka.network*',
+                            // 'https://cdn.intergient.com*',
+                        ],
+                    })
+                } catch (err) {
+                    console.error(err)
+                }
+            },
+        })
+        emitter.addListener('load', (url, index, string) => {
+            console.log(url)
+        })
+        emitter.addListener('har', (har) => {
+            res(har)
+        })
+
+        emitter.addListener('fail', (url, err, index) => {
+            rej(`${err} on url ${url} (i=${index})`)
+        })
+    })
 }
