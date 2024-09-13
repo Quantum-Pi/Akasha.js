@@ -6,7 +6,11 @@ Unofficial API Wrapper for [akasha.cv](https://akasha.cv/)
 
 ## Usage
 
-TODO
+```sh
+npm i akasha.js
+yarn add akasha.js
+pnpm i akasha.js
+```
 
 ## API Documentation
 

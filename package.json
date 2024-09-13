@@ -1,11 +1,11 @@
 {
     "name": "akasha.js",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "API wrapper for akasha.cv",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc",
+        "build": "rm -rf dist && tsc",
         "run": "node dist/index.js",
         "gen:openapi": "ts-node spec/genSpec.ts",
         "gen:types": "openapi-typescript ./spec/openapi.yaml -o ./src/schema.ts",
