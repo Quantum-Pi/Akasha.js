@@ -30,16 +30,16 @@ console.log(`${name}: ${ranking.toFixed(2)}%`)
 
 ## API Documentation
 
-The API is documented using the OpenAPI Specification. The contract file is automatically generated from a HAR file obtained by loading the profiles endpoint on akasha.cv.
+The API is documented using the OpenAPI Specification. The contract file is automatically generated from a HAR file obtained by loading the various endpoints on akasha.cv.
 
 The documentation can be viewed on [swagger.io](https://editor.swagger.io/?url=https://raw.githubusercontent.com/Quantum-Pi/Akasha.js/main/spec/openapi.yaml)
 
 NOTE:
 
--   The method of only capturing API calls on the profiles page doesn't reflect the full scope of endpoints on akasha.cv. This decision was made due to my narrow use case. If you've discovered an endpoint not covered in the contract, please open an issue specifying what it is and I can look into supporting it.
+-   The method used to capture API calls doesn't reflect the full scope of endpoints on akasha.cv. This decision was made due to my narrow use case. If you've discovered an endpoint not covered in the contract, please open an issue specifying what it is and I can look into supporting it. Please keep in mind that any endpoints containing data that can be found on Enka.network and/or interact with (Enka.network)[https://enka.network/] are intentionally excluded.
 -   The automated generation of the contract isn't perfect. If you find a discrepency between the expected type and what it actually contains, please open an issue to notify me.
--   Since akasha.cv's API isn't intended for public use, it can change at any time. The script `pnpm run validate` can detect unexpected changes between the current contract & and an updated HAR file.
--   Other's are more then welcome to use the generated API contract in this repo for their own purposes, such as a wrapper in another language.
+-   Akasha.cv's API isn't intended for public use and can change at any time. The script `pnpm run validate` can detect unexpected changes between the repo's contract and a newly generated one. `pnpm run gen` will genereate an updated contract & typings.
+-   Other's are more then welcome to use the generated API contract in this repo for their own purposes, such as a wrapper in another language. Please keep in mind that it can quickly become out of date is you choose to copy it.
 
 ## Project Structure
 
