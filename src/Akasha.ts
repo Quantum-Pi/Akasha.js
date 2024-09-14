@@ -1,5 +1,6 @@
 import { operations } from './schema'
-import { version } from '../package.json'
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const pkg = require('../package.json')
 
 type GetCalculationsForUser =
     operations['getApiGetCalculationsForUserById']['responses']['200']['content']['application/json']
@@ -17,7 +18,7 @@ export default class AkashaAPI {
     private baseURL = 'https://akasha.cv/api/'
     private usage: string = ''
     private header: HeadersInit = {
-        'User-Agent': `Akasha.js / v${version} (${this.usage})`,
+        'User-Agent': `Akasha.js / v${pkg} (${this.usage})`,
     }
 
     /**
