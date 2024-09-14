@@ -1,20 +1,16 @@
 import { generateSpec } from 'har-to-openapi'
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { getHAR, reduceExamples, setRequired } from './common'
 
 import YAML from 'js-yaml'
 ;(async () => {
-    // const profileHar = JSON.parse(
-    //     readFileSync('./spec/akasha_profile.har').toString('utf-8')
-    // )
-    // const leaderboardHar = JSON.parse(readFileSync('./spec/akasha_leaderboard.har').toString('utf-8'))
-    console.log('start')
     const har = await getHAR([
         'https://akasha.cv/profile/605452914',
         'https://akasha.cv/leaderboards',
         'https://akasha.cv/builds',
         'https://akasha.cv/artifacts',
     ])
+
     writeFileSync('spec/tmp.har', JSON.stringify(har))
     const { spec } = await generateSpec(har, {
         attemptToParameterizeUrl: true,

@@ -44,9 +44,9 @@ function flattenObject(obj: Record<string, any>) {
 ;(async () => {
     const har = await getHAR([
         'https://akasha.cv/profile/605452914',
-        // 'https://akasha.cv/leaderboards',
-        // 'https://akasha.cv/builds',
-        // 'https://akasha.cv/artifacts',
+        'https://akasha.cv/leaderboards',
+        'https://akasha.cv/builds',
+        'https://akasha.cv/artifacts',
     ])
 
     const { yamlSpec, domain, spec } = await generateSpec(har, {
@@ -78,6 +78,7 @@ function flattenObject(obj: Record<string, any>) {
         flattenObject(oldSpec),
         flattenObject(newSpec)
     )
+
     console.log(updated)
     console.log(removed)
 })()
