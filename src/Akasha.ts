@@ -1,4 +1,5 @@
 import { operations } from './schema'
+import { version } from '../package.json'
 
 type GetCalculationsForUser =
     operations['getApiGetCalculationsForUserById']['responses']['200']['content']['application/json']
@@ -14,27 +15,47 @@ type GetApiFiltersCharacters =
 
 export default class AkashaAPI {
     private baseURL = 'https://akasha.cv/api/'
-    private uuid: string
-
-    constructor(uuid: string) {
-        this.uuid = uuid
+    private usage: string = ''
+    private header: HeadersInit = {
+        'User-Agent': `Akasha.js / v${version} (${this.usage})`,
     }
 
-    async getCalculationsForUser(): Promise<GetCalculationsForUser> {
-        const url = `${this.baseURL}getCalculationsForUser/${this.uuid}`
-        const response = await fetch(url, { method: 'GET' })
+    /**
+     *
+     * @param usage - Intended usage of the consumer of the API wrapper (kept to a single sentence, appended to user agent)
+     * @example new Akasha("external stats for {uuid}")
+     * @example new Akasha("live percentiles of characters for my account")
+     */
+    constructor(usage: string = '') {
+        this.usage = usage
+    }
+
+    async getCalculationsForUser(
+        uuid: string
+    ): Promise<GetCalculationsForUser> {
+        const url = `${this.baseURL}getCalculationsForUser/${uuid}`
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: this.header,
+        })
         return await response.json()
     }
 
     async getApiFiltersArtifacts(): Promise<GetApiFiltersArtifacts> {
         const url = `${this.baseURL}filters/artifacts`
-        const response = await fetch(url, { method: 'GET' })
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: this.header,
+        })
         return await response.json()
     }
 
     async getApiFiltersCategories(): Promise<GetApiFiltersCategories> {
         const url = `${this.baseURL}filters/categories`
-        const response = await fetch(url, { method: 'GET' })
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: this.header,
+        })
         return await response.json()
     }
 
