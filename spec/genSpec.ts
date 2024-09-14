@@ -11,9 +11,9 @@ import YAML from 'js-yaml'
     console.log('start')
     const har = await getHAR([
         'https://akasha.cv/profile/605452914',
-        // 'https://akasha.cv/leaderboards',
-        // 'https://akasha.cv/builds',
-        // 'https://akasha.cv/artifacts',
+        'https://akasha.cv/leaderboards',
+        'https://akasha.cv/builds',
+        'https://akasha.cv/artifacts',
     ])
     writeFileSync('spec/tmp.har', JSON.stringify(har))
     const { spec } = await generateSpec(har, {

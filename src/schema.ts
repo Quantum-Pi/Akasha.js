@@ -4,907 +4,1119 @@
  */
 
 export interface paths {
-    '/api/artifacts': {
+    "/api/artifacts": {
         parameters: {
-            query?: never
-            header?: never
-            path?: never
-            cookie?: never
-        }
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
         /** Get Api Artifacts */
-        get: operations['getApiArtifacts']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/builds': {
+        get: operations["getApiArtifacts"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/builds": {
         parameters: {
-            query?: never
-            header?: never
-            path?: never
-            cookie?: never
-        }
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
         /** Get Api Builds */
-        get: operations['getApiBuilds']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/filters/artifacts': {
+        get: operations["getApiBuilds"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/filters/artifacts": {
         parameters: {
-            query?: never
-            header?: never
-            path?: never
-            cookie?: never
-        }
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
         /** Get Api Filters Artifacts */
-        get: operations['getApiFiltersArtifacts']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/filters/characters': {
+        get: operations["getApiFiltersArtifacts"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/filters/categories": {
         parameters: {
-            query?: never
-            header?: never
-            path?: never
-            cookie?: never
-        }
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Api Filters Categories */
+        get: operations["getApiFiltersCategories"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/filters/characters": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
         /** Get Api Filters Characters */
-        get: operations['getApiFiltersCharacters']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/getCalculationsForUser/{id}': {
+        get: operations["getApiFiltersCharacters"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/getCalculationsForUser/{id}": {
         parameters: {
-            query?: never
-            header?: never
+            query?: never;
+            header?: never;
             path: {
                 /** @example 605452914 */
-                id: number
-            }
-            cookie?: never
-        }
+                id: number;
+            };
+            cookie?: never;
+        };
         /** Get Api Get Calculations For User By ID */
-        get: operations['getApiGetCalculationsForUserById']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/getCollectionSize': {
+        get: operations["getApiGetCalculationsForUserById"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/getCollectionSize": {
         parameters: {
-            query?: never
-            header?: never
-            path?: never
-            cookie?: never
-        }
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
         /** Get Api Get Collection Size */
-        get: operations['getApiGetCollectionSize']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/getRelevantProfiles/{id}': {
+        get: operations["getApiGetCollectionSize"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/getRelevantProfiles/{id}": {
         parameters: {
-            query?: never
-            header?: never
+            query?: never;
+            header?: never;
             path: {
                 /** @example 605452914 */
-                id: number
-            }
-            cookie?: never
-        }
+                id: number;
+            };
+            cookie?: never;
+        };
         /** Get Api Get Relevant Profiles By ID */
-        get: operations['getApiGetRelevantProfilesById']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
-    '/api/user/{id}': {
+        get: operations["getApiGetRelevantProfilesById"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/user/{id}": {
         parameters: {
-            query?: never
-            header?: never
+            query?: never;
+            header?: never;
             path: {
                 /** @example 605452914 */
-                id: number
-            }
-            cookie?: never
-        }
+                id: number;
+            };
+            cookie?: never;
+        };
         /** Get Api User By ID */
-        get: operations['getApiUserById']
-        put?: never
-        post?: never
-        delete?: never
-        options?: never
-        head?: never
-        patch?: never
-        trace?: never
-    }
+        get: operations["getApiUserById"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v2/leaderboards/categories": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Api V 2 Leaderboards Categories */
+        get: operations["getApiV2LeaderboardsCategories"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
-export type webhooks = Record<string, never>
+export type webhooks = Record<string, never>;
 export interface components {
-    schemas: never
-    responses: never
-    parameters: never
-    requestBodies: never
-    headers: never
-    pathItems: never
+    schemas: never;
+    responses: never;
+    parameters: never;
+    requestBodies: never;
+    headers: never;
+    pathItems: never;
 }
-export type $defs = Record<string, never>
+export type $defs = Record<string, never>;
 export interface operations {
     getApiArtifacts: {
         parameters: {
             query?: {
                 /** @description sort */
-                sort?: string
+                sort?: string;
                 /** @description order */
-                order?: string
+                order?: string;
                 /** @description size */
-                size?: string
+                size?: string;
                 /** @description page */
-                page?: string
+                page?: string;
                 /** @description filter */
-                filter?: string
+                filter?: string;
                 /** @description uids */
-                uids?: string
+                uids?: string;
                 /** @description p */
-                p?: string
+                p?: string;
                 /** @description fromId */
-                fromId?: string
+                fromId?: string;
                 /** @description uid */
-                uid?: string
-            }
-            header?: never
-            path?: never
-            cookie?: never
-        }
-        requestBody?: never
+                uid?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
+                    "application/json": {
                         data: {
-                            _id: string
-                            critValue: number
+                            _id: string;
+                            critValue: number;
                             /**
                              * EquipType
                              * @enum {string}
                              */
-                            equipType:
-                                | 'EQUIP_NECKLACE'
-                                | 'EQUIP_BRACER'
-                                | 'EQUIP_SHOES'
-                                | 'EQUIP_RING'
+                            equipType: "EQUIP_NECKLACE" | "EQUIP_BRACER" | "EQUIP_SHOES" | "EQUIP_RING" | "EQUIP_DRESS";
                             /** Format: uri */
-                            icon: string
-                            index: number
-                            level: number
-                            mainStatKey: string
-                            mainStatValue: number
-                            name: string
+                            icon: string;
+                            index: number;
+                            level: number;
+                            mainStatKey: string;
+                            mainStatValue: number;
+                            name: string;
                             /** Format: uri */
-                            nameCardLink: string
+                            nameCardLink: string;
                             /** Owner */
                             owner: {
-                                adventureRank: number
+                                adventureRank: number;
                                 /** Discord */
                                 discord: {
-                                    id: string
-                                }
+                                    id: string;
+                                };
                                 /** EnkaOwner */
-                                enkaOwner: Record<string, never>
+                                enkaOwner: Record<string, never>;
                                 /** Format: integer */
-                                inGameUID: string
-                                /**
-                                 * NameCard
-                                 * @enum {string}
-                                 */
-                                nameCard: 'UI_NameCardPic_Oraionokami_P'
-                                /**
-                                 * Nickname
-                                 * @enum {string}
-                                 */
-                                nickname: 'QuantumPie'
+                                inGameUID: string;
+                                nameCard: string;
+                                nickname: string;
                                 /** Discord */
                                 patreon: {
-                                    id: string
-                                }
+                                    id: string;
+                                };
                                 /** ProfilePicture */
                                 profilePicture: {
                                     /** Assets */
                                     assets: {
-                                        /**
-                                         * Icon
-                                         * @enum {string}
-                                         */
-                                        icon: 'UI_AvatarIcon_Yelan_Circle'
-                                        /**
-                                         * OldIcon
-                                         * @enum {string}
-                                         */
-                                        oldIcon: 'UI_AvatarIcon_Yelan'
-                                    }
-                                    characterId: number
-                                    id: number
-                                    name: unknown
-                                }
+                                        icon: string;
+                                        oldIcon: string;
+                                    };
+                                    characterId: number;
+                                    id: number;
+                                    name: unknown;
+                                };
                                 /**
                                  * Region
                                  * @enum {string}
                                  */
-                                region: 'NA'
-                            }
+                                region: "NA" | "ASIA" | "EU";
+                            };
                             /** Format: uri */
-                            profilePictureLink: string
-                            setName: string
-                            stars: number
+                            profilePictureLink: string;
+                            setName: string;
+                            stars: number;
                             substats: {
-                                [key: string]: number
-                            }
-                            substatsIdList: number[]
+                                [key: string]: number;
+                            };
+                            substatsIdList: number[];
                             /** Format: integer */
-                            uid: string
-                            universal_md5: string
-                        }[]
-                        totalRowsHash: string
-                        ttl: number
-                    }
-                }
-            }
-        }
-    }
+                            uid: string;
+                            universal_md5: string;
+                        }[];
+                        totalRowsHash: string;
+                        ttl: number;
+                    };
+                };
+            };
+        };
+    };
     getApiBuilds: {
         parameters: {
             query?: {
                 /** @description sort */
-                sort?: string
+                sort?: string;
                 /** @description order */
-                order?: string
+                order?: string;
                 /** @description size */
-                size?: string
+                size?: string;
                 /** @description page */
-                page?: string
+                page?: string;
                 /** @description filter */
-                filter?: string
+                filter?: string;
                 /** @description uids */
-                uids?: string
+                uids?: string;
                 /** @description p */
-                p?: string
+                p?: string;
                 /** @description fromId */
-                fromId?: string
+                fromId?: string;
                 /** @description uid */
-                uid?: string
-            }
-            header?: never
-            path?: never
-            cookie?: never
-        }
-        requestBody?: never
+                uid?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
+                    "application/json": {
                         data: {
-                            _id: string
+                            _id: string;
                             /** ArtifactObjects */
                             artifactObjects: {
                                 /** Equip */
                                 EQUIP_DRESS: {
-                                    mainStatKey: string
-                                }
+                                    mainStatKey: string;
+                                };
                                 /** Equip */
                                 EQUIP_RING: {
-                                    mainStatKey: string
-                                }
-                                /** Equip */
+                                    mainStatKey: string;
+                                };
+                                /** EquipShoes */
                                 EQUIP_SHOES: {
-                                    mainStatKey: string
-                                }
-                            }
+                                    /**
+                                     * MainStatKey
+                                     * @enum {string}
+                                     */
+                                    mainStatKey: "ATK%" | "HP%" | "Energy Recharge" | "Elemental Mastery" | "DEF%";
+                                };
+                            };
                             artifactSets: {
                                 [key: string]: {
-                                    count?: number
+                                    count?: number;
                                     /** Format: uri */
-                                    icon?: string
-                                }
-                            }
-                            characterId: number
+                                    icon?: string;
+                                };
+                            };
+                            characterId: number;
                             /** CharacterMetadata */
                             characterMetadata: {
-                                element: string
-                            }
-                            constellation: number
-                            costumeId: string
-                            critValue: number
+                                element: string;
+                            };
+                            constellation: number;
+                            /** CostumeID */
+                            costumeId: number | string;
+                            critValue: number;
                             /** FetterInfo */
                             fetterInfo: {
-                                expLevel: number
-                            }
+                                expLevel: number;
+                            };
                             /** Format: uri */
-                            icon: string
-                            index: number
-                            lastBuildUpdate: number
-                            md5: string
-                            name: string
+                            icon: string;
+                            index: number;
+                            lastBuildUpdate: number;
+                            md5: string;
+                            name: string;
                             /** Format: uri */
-                            nameCardLink: string
+                            nameCardLink: string;
                             /** Owner */
                             owner: {
-                                adventureRank: number
-                                /**
-                                 * NameCard
-                                 * @enum {string}
-                                 */
-                                nameCard: 'UI_NameCardPic_Oraionokami_P'
-                                /**
-                                 * Nickname
-                                 * @enum {string}
-                                 */
-                                nickname: 'QuantumPie'
+                                adventureRank: number;
+                                nameCard: string;
+                                nickname: string;
                                 /** Patreon */
-                                patreon: Record<string, never>
+                                patreon: {
+                                    active: boolean;
+                                    color: string;
+                                };
                                 /** ProfilePicture */
                                 profilePicture: {
                                     /** Assets */
                                     assets: {
-                                        /**
-                                         * IconEnum
-                                         * @enum {string}
-                                         */
-                                        icon: 'UI_AvatarIcon_Yelan_Circle'
-                                        /**
-                                         * OldIcon
-                                         * @enum {string}
-                                         */
-                                        oldIcon: 'UI_AvatarIcon_Yelan'
-                                    }
-                                    characterId: number
-                                    id: number
-                                    name: unknown
-                                }
+                                        constellations: string[];
+                                        costumes: {
+                                            art: string;
+                                            icon: string;
+                                            sideIconName: string;
+                                        }[];
+                                        gachaIcon: string;
+                                        icon: string;
+                                        oldIcon: string;
+                                        sideIcon: string;
+                                        /** Talents */
+                                        talents: {
+                                            elementalBurst: string;
+                                            elementalSkill: string;
+                                            normalAttack: string;
+                                        };
+                                    };
+                                    characterId: number;
+                                    /** CostumeID */
+                                    id: number | string;
+                                    name: unknown;
+                                };
                                 /**
                                  * Region
                                  * @enum {string}
                                  */
-                                region: 'NA'
-                            }
+                                region: "NA" | "ASIA" | "B" | "EU" | "CN";
+                            };
                             /** Format: uri */
-                            profilePictureLink: string
+                            profilePictureLink: string;
                             /** PropMap */
                             propMap: {
                                 /** Ascension */
                                 ascension: {
                                     /** Format: integer */
-                                    val: string
-                                }
+                                    val: string;
+                                };
                                 /** Ascension */
                                 level: {
                                     /** Format: integer */
-                                    val: string
-                                }
-                            }
+                                    val: string;
+                                };
+                            };
                             proudSkillExtraLevelMap: {
-                                [key: string]: number
-                            }
-                            skillDepotId: number
-                            sortableType: string
+                                [key: string]: number;
+                            };
+                            skillDepotId: number;
+                            sortableType: string;
                             stats: {
                                 [key: string]: {
-                                    value?: number
-                                }
-                            }
+                                    value?: number;
+                                };
+                            };
                             /** TalentsLevelMap */
                             talentsLevelMap: {
                                 /** ElementalBurst */
                                 elementalBurst: {
-                                    boosted: boolean
+                                    boosted: boolean;
                                     /** Format: uri */
-                                    icon: string
-                                    id: number
-                                    level: number
-                                    rawLevel: number
-                                }
+                                    icon: string;
+                                    id: number;
+                                    level: number;
+                                    rawLevel: number;
+                                };
                                 /** ElementalBurst */
                                 elementalSkill: {
-                                    boosted: boolean
+                                    boosted: boolean;
                                     /** Format: uri */
-                                    icon: string
-                                    id: number
-                                    level: number
-                                    rawLevel: number
-                                }
+                                    icon: string;
+                                    id: number;
+                                    level: number;
+                                    rawLevel: number;
+                                };
                                 /** ElementalBurst */
                                 normalAttacks: {
-                                    boosted: boolean
+                                    boosted: boolean;
                                     /** Format: uri */
-                                    icon: string
-                                    id: number
-                                    level: number
-                                    rawLevel: number
-                                }
-                            }
-                            /**
-                             * Type
-                             * @enum {string}
-                             */
-                            type: 'current'
+                                    icon: string;
+                                    id: number;
+                                    level: number;
+                                    rawLevel: number;
+                                };
+                            };
+                            type: string;
                             /** Format: integer */
-                            uid: string
+                            uid: string;
                             /** Weapon */
                             weapon: {
                                 /** Flat */
                                 flat: {
-                                    /** IconClass */
+                                    /** Icon */
                                     icon: {
-                                        value: string
-                                    }
-                                }
+                                        value: string;
+                                    };
+                                };
                                 /** Format: uri */
-                                icon: string
-                                name: string
+                                icon: string;
+                                name: string;
                                 /** WeaponInfo */
                                 weaponInfo: {
-                                    level: number
-                                    promoteLevel: number
+                                    level: number;
+                                    promoteLevel: number;
                                     /** RefinementLevel */
                                     refinementLevel: {
-                                        value: number
-                                    }
-                                }
-                            }
-                        }[]
-                        totalRowsHash: string
-                        ttl: number
-                    }
-                }
-            }
-        }
-    }
+                                        value: number;
+                                    };
+                                };
+                            };
+                        }[];
+                        totalRowsHash: string;
+                        ttl: number;
+                    };
+                };
+            };
+        };
+    };
     getApiFiltersArtifacts: {
         parameters: {
             query?: {
                 /** @description type */
-                type?: string
-            }
-            header?: never
-            path?: never
-            cookie?: never
-        }
-        requestBody?: never
+                type?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
+                    "application/json": {
                         data: {
-                            fieldKey: string
-                            fieldName: string
+                            fieldKey: string;
+                            fieldName: string;
                             options: {
                                 /** Format: uri */
-                                icon: string
-                                name: string
-                                value: string
-                            }[]
-                        }[]
-                    }
-                }
-            }
-        }
-    }
+                                icon: string;
+                                name: string;
+                                value: string;
+                            }[];
+                        }[];
+                    };
+                };
+            };
+        };
+    };
+    getApiFiltersCategories: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        data: {
+                            fieldKey: string;
+                            fieldName: string;
+                            options: {
+                                /** Format: uri */
+                                icon: string;
+                                name: string;
+                                value: string;
+                            }[];
+                        }[];
+                    };
+                };
+            };
+        };
+    };
     getApiFiltersCharacters: {
         parameters: {
             query?: {
                 /** @description type */
-                type?: string
-            }
-            header?: never
-            path?: never
-            cookie?: never
-        }
-        requestBody?: never
+                type?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
+                    "application/json": {
                         data: {
-                            fieldKey: string
-                            fieldName: string
+                            fieldKey: string;
+                            fieldName: string;
                             options: {
                                 /** Format: uri */
-                                icon: string
-                                name: string
-                                value: string
-                            }[]
-                        }[]
-                    }
-                }
-            }
-        }
-    }
+                                icon: string;
+                                name: string;
+                                value: string;
+                            }[];
+                        }[];
+                    };
+                };
+            };
+        };
+    };
     getApiGetCalculationsForUserById: {
         parameters: {
-            query?: never
-            header?: never
+            query?: never;
+            header?: never;
             path: {
                 /** @example 605452914 */
-                id: number
-            }
-            cookie?: never
-        }
-        requestBody?: never
+                id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
+                    "application/json": {
                         data: {
-                            _id: string
+                            _id: string;
                             artifactSets: {
                                 [key: string]: {
-                                    count?: number
-                                    icon?: string
-                                }
-                            }
+                                    count?: number;
+                                    icon?: string;
+                                };
+                            };
                             /** Calculations */
                             calculations: {
                                 /** Fit */
                                 fit: {
                                     /** Format: integer */
-                                    calculationId: string
-                                    details: string
-                                    md5: string
-                                    name: string
-                                    outOf: number
-                                    priority: number
-                                    ranking: number
-                                    result: number
-                                    short: string
-                                    stats: unknown
+                                    calculationId: string;
+                                    details: string;
+                                    md5: string;
+                                    name: string;
+                                    outOf: number;
+                                    priority: number;
+                                    ranking: number;
+                                    result: number;
+                                    short: string;
+                                    stats: unknown;
                                     /**
                                      * Type
                                      * @enum {string}
                                      */
-                                    type: 'current'
+                                    type: "current";
                                     /** Variant */
                                     variant: {
-                                        displayName: string
-                                        name: string
-                                    }
+                                        displayName: string;
+                                        name: string;
+                                    };
                                     /** FitWeapon */
                                     weapon: {
                                         /** Format: uri */
-                                        icon: string
-                                        name: string
-                                        rarity: number
-                                        refinement: number
-                                        substat: string
-                                        type: string
-                                    }
-                                }
-                            }
-                            characterId: number
-                            constellation: number
+                                        icon: string;
+                                        name: string;
+                                        rarity: number;
+                                        refinement: number;
+                                        substat: string;
+                                        type: string;
+                                    };
+                                };
+                            };
+                            characterId: number;
+                            constellation: number;
                             /** Format: uri */
-                            icon: string
-                            md5: string
-                            name: string
-                            stats: unknown
+                            icon: string;
+                            md5: string;
+                            name: string;
+                            stats: unknown;
                             /**
                              * Type
                              * @enum {string}
                              */
-                            type: 'current'
+                            type: "current";
                             /** Format: integer */
-                            uid: string
+                            uid: string;
                             /** DatumWeapon */
                             weapon: {
                                 /** Flat */
                                 flat: {
                                     /** Icon */
                                     icon: {
-                                        toLink: unknown
-                                        value: string
-                                    }
+                                        toLink: unknown;
+                                        value: string;
+                                    };
                                     /**
                                      * ItemType
                                      * @enum {string}
                                      */
-                                    itemType: 'ITEM_WEAPON'
-                                    name: unknown
-                                    nameTextMapHash: string
-                                    stars: number
+                                    itemType: "ITEM_WEAPON";
+                                    name: unknown;
+                                    nameTextMapHash: string;
+                                    stars: number;
                                     weaponStats: {
-                                        stat: string
-                                        statValue: number
-                                    }[]
-                                }
+                                        stat: string;
+                                        statValue: number;
+                                    }[];
+                                };
                                 /** Format: uri */
-                                icon: string
-                                name: string
-                                weaponId: number
+                                icon: string;
+                                name: string;
+                                weaponId: number;
                                 /** WeaponInfo */
                                 weaponInfo: {
-                                    level: number
-                                    promoteLevel: number
+                                    level: number;
+                                    promoteLevel: number;
                                     /** RefinementLevel */
                                     refinementLevel: {
-                                        value: number
-                                    }
-                                }
-                            }
-                        }[]
-                        ttl: number
-                    }
-                }
-            }
-        }
-    }
+                                        value: number;
+                                    };
+                                };
+                            };
+                        }[];
+                        ttl: number;
+                    };
+                };
+            };
+        };
+    };
     getApiGetCollectionSize: {
         parameters: {
             query?: {
                 /** @description variant */
-                variant?: string
+                variant?: string;
                 /** @description hash */
-                hash?: string
-            }
-            header?: never
-            path?: never
-            cookie?: never
-        }
-        requestBody?: never
+                hash?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
-                        totalRows: number
-                    }
-                }
-            }
-        }
-    }
+                    "application/json": {
+                        totalRows: number;
+                    };
+                };
+            };
+        };
+    };
     getApiGetRelevantProfilesById: {
         parameters: {
-            query?: never
+            query?: never;
             header?: {
                 /** @description Authorization */
-                Authorization?: string
-            }
+                Authorization?: string;
+            };
             path: {
                 /** @example 605452914 */
-                id: number
-            }
-            cookie?: never
-        }
-        requestBody?: never
+                id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
+                    "application/json": {
                         data: {
-                            _id: string
+                            _id: string;
                             achievements: {
-                                count: number
-                                description: string
-                                id: number
-                                name: string
-                                score: number
-                                type: string
-                            }[]
-                            buildsCount: number
+                                count: number;
+                                description: string;
+                                id: number;
+                                name: string;
+                                score: number;
+                                type: string;
+                            }[];
+                            buildsCount: number;
                             /** Format: uri */
-                            displayAvatarLink: string
-                            enkaAvatar: unknown
-                            lastProfileUpdate: number
+                            displayAvatarLink: string;
+                            enkaAvatar: unknown;
+                            lastProfileUpdate: number;
                             /** Format: uri */
-                            namecardURL: string
-                            ownedCharacters: number[]
+                            namecardURL: string;
+                            ownedCharacters: number[];
                             /** Patreon */
                             patreon: {
-                                active: boolean
-                            }
+                                active: boolean;
+                            };
                             /** PlayerInfo */
                             playerInfo: {
                                 /** EnkaOwner */
-                                enkaOwner: Record<string, never>
-                                finishAchievementNum: number
+                                enkaOwner: Record<string, never>;
+                                finishAchievementNum: number;
                                 /** Format: integer */
-                                inGameUID: string
-                                level: number
-                                maxFriendshipCount: number
+                                inGameUID: string;
+                                level: number;
+                                maxFriendshipCount: number;
                                 /** NameCardID */
                                 nameCardId: {
                                     /** NameCardIDAssets */
                                     assets: {
-                                        icon: string
-                                        picPath: string[]
-                                    }
-                                    id: number
-                                    name: unknown
-                                }
-                                nickname: string
+                                        icon: string;
+                                        picPath: string[];
+                                    };
+                                    id: number;
+                                    name: unknown;
+                                };
+                                nickname: string;
                                 /** ProfilePicture */
                                 profilePicture: {
                                     /** ProfilePictureAssets */
                                     assets: {
-                                        icon: string
-                                        oldIcon: string
-                                    }
-                                    characterId: number
-                                    id: number
-                                    name: unknown
-                                }
-                                region: string
+                                        icon: string;
+                                        oldIcon: string;
+                                    };
+                                    characterId: number;
+                                    id: number;
+                                    name: unknown;
+                                };
+                                region: string;
                                 /** Format: integer */
-                                signature: string
+                                signature: string;
                                 /** Theater */
                                 theater: {
-                                    act: number
-                                    mode: string
-                                    modeIndex: number
-                                    stars: number
-                                }
-                                towerFloorIndex: number
-                                towerLevelIndex: number
-                                towerStarIndex: number
-                                worldLevel: number
-                            }
+                                    act: number;
+                                    mode: string;
+                                    modeIndex: number;
+                                    stars: number;
+                                };
+                                towerFloorIndex: number;
+                                towerLevelIndex: number;
+                                towerStarIndex: number;
+                                worldLevel: number;
+                            };
                             /** Format: integer */
-                            uid: string
+                            uid: string;
                             /** Format: uri */
-                            uidAvatar: string
-                        }[]
-                        ttl: number
-                    }
-                }
-            }
-        }
-    }
+                            uidAvatar: string;
+                        }[];
+                        ttl: number;
+                    };
+                };
+            };
+        };
+    };
     getApiUserById: {
         parameters: {
-            query?: never
+            query?: never;
             header?: {
                 /** @description Authorization */
-                Authorization?: string
-            }
+                Authorization?: string;
+            };
             path: {
                 /** @example 605452914 */
-                id: number
-            }
-            cookie?: never
-        }
-        requestBody?: never
+                id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
         responses: {
             200: {
                 headers: {
-                    [name: string]: unknown
-                }
+                    [name: string]: unknown;
+                };
                 content: {
-                    'application/json': {
-                        bindTTL: number
+                    "application/json": {
+                        bindTTL: number;
                         /** Data */
                         data: {
                             /** Account */
                             account: {
-                                _id: string
+                                _id: string;
                                 achievements: {
-                                    count: number
-                                    description: string
-                                    id: number
-                                    name: string
-                                    score: number
-                                    type: string
-                                }[]
-                                lastProfileUpdate: number
+                                    count: number;
+                                    description: string;
+                                    id: number;
+                                    name: string;
+                                    score: number;
+                                    type: string;
+                                }[];
+                                lastProfileUpdate: number;
                                 /** Format: uri */
-                                nameCardLink: string
-                                ownedCharacters: number[]
+                                nameCardLink: string;
+                                ownedCharacters: number[];
                                 /** Patreon */
-                                patreon: Record<string, never>
+                                patreon: Record<string, never>;
                                 /** PlayerInfo */
                                 playerInfo: {
                                     /** Patreon */
-                                    enkaOwner: Record<string, never>
-                                    finishAchievementNum: number
+                                    enkaOwner: Record<string, never>;
+                                    finishAchievementNum: number;
                                     /** Format: integer */
-                                    inGameUID: string
-                                    level: number
-                                    maxFriendshipCount: number
+                                    inGameUID: string;
+                                    level: number;
+                                    maxFriendshipCount: number;
                                     /** NameCardID */
                                     nameCardId: {
                                         /** NameCardIDAssets */
                                         assets: {
-                                            icon: string
-                                            picPath: string[]
-                                        }
-                                        id: number
-                                        name: unknown
-                                    }
-                                    nickname: string
+                                            icon: string;
+                                            picPath: string[];
+                                        };
+                                        id: number;
+                                        name: unknown;
+                                    };
+                                    nickname: string;
                                     /** ProfilePicture */
                                     profilePicture: {
                                         /** ProfilePictureAssets */
                                         assets: {
-                                            icon: string
-                                            oldIcon: string
-                                        }
-                                        characterId: number
-                                        id: number
-                                        name: unknown
-                                    }
-                                    region: string
+                                            icon: string;
+                                            oldIcon: string;
+                                        };
+                                        characterId: number;
+                                        id: number;
+                                        name: unknown;
+                                    };
+                                    region: string;
                                     /** Format: integer */
-                                    signature: string
+                                    signature: string;
                                     /** Theater */
                                     theater: {
-                                        act: number
-                                        mode: string
-                                        modeIndex: number
-                                        stars: number
-                                    }
-                                    towerFloorIndex: number
-                                    towerLevelIndex: number
-                                    towerStarIndex: number
-                                    worldLevel: number
-                                }
+                                        act: number;
+                                        mode: string;
+                                        modeIndex: number;
+                                        stars: number;
+                                    };
+                                    towerFloorIndex: number;
+                                    towerLevelIndex: number;
+                                    towerStarIndex: number;
+                                    worldLevel: number;
+                                };
                                 /** Format: uri */
-                                profilePictureLink: string
+                                profilePictureLink: string;
                                 /** Format: integer */
-                                uid: string
-                            }
-                        }
-                        secret: unknown
-                        ttl: number
-                    }
-                }
-            }
-        }
-    }
+                                uid: string;
+                            };
+                        };
+                        secret: unknown;
+                        ttl: number;
+                    };
+                };
+            };
+        };
+    };
+    getApiV2LeaderboardsCategories: {
+        parameters: {
+            query?: {
+                /** @description sort */
+                sort?: string;
+                /** @description order */
+                order?: string;
+                /** @description size */
+                size?: string;
+                /** @description page */
+                page?: string;
+                /** @description filter */
+                filter?: string;
+                /** @description uids */
+                uids?: string;
+                /** @description p */
+                p?: string;
+                /** @description fromId */
+                fromId?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        data: {
+                            _id: string;
+                            addDate: number;
+                            /**
+                             * C6
+                             * @enum {string}
+                             */
+                            c6: "" | "c6";
+                            /** Format: uri */
+                            characterIcon: string;
+                            characterId: number;
+                            characterName: string;
+                            count: number;
+                            details: string;
+                            /**
+                             * Element
+                             * @enum {string}
+                             */
+                            element: "Electro" | "Hydro" | "Anemo" | "Dendro" | "Pyro" | "Geo" | "Cryo";
+                            hidden: boolean;
+                            index: number;
+                            label: string;
+                            name: string;
+                            new: number;
+                            rarity: number;
+                            short: string;
+                            weapons: {
+                                /** Format: integer */
+                                calculationId: string;
+                                defaultVariant: "160er" | "180er" | "c6" | "c2-160er" | "130er" | "c2-130er" | "c2" | "vv" | "120er" | null;
+                                details: string;
+                                filters: {
+                                    $and?: {
+                                        /** ArtifactSetsCount */
+                                        "artifactSets.Deepwood Memories.count"?: {
+                                            $gte?: number;
+                                        };
+                                        /** ArtifactSetsNoblesseObligeCount */
+                                        "artifactSets.Noblesse Oblige.count"?: {
+                                            $in?: (number | null)[];
+                                        };
+                                        /** ArtifactSetsCount */
+                                        "artifactSets.Thundering Fury.count"?: {
+                                            $gte?: number;
+                                        };
+                                        /** ArtifactSetsCount */
+                                        "artifactSets.Viridescent Venerer.count"?: {
+                                            $gte?: number;
+                                        };
+                                        constellation?: {
+                                            [key: string]: number;
+                                        };
+                                        /** StatsEnergyRechargeValue */
+                                        "stats.energyRecharge.value"?: {
+                                            $gte?: number;
+                                        };
+                                    }[];
+                                    /**
+                                     * DisplayGroup
+                                     * @enum {string}
+                                     */
+                                    displayGroup?: "base" | "non-4p Deepwood" | "C6" | "C2" | "non-4p Shimenawa's" | "4p Shimenawa's" | "4p ToTM" | "4p Petra" | "4p Wanderer's" | "4p Blizzard" | "4p Thundering Fury" | "4p Deepwood" | "ToTM" | "4p Viridescent" | "non-4p Noblesse";
+                                    displayName?: string;
+                                    name?: string;
+                                    /** Query */
+                                    query?: {
+                                        /**
+                                         * Field
+                                         * @enum {string}
+                                         */
+                                        field?: "stats.energyRecharge.value" | "artifactSets.Deepwood Memories.count" | "constellation" | "artifactSets.Shimenawa's Reminiscence.count" | "artifactSets.Tenacity of the Millelith.count" | "artifactSets.Archaic Petra.count" | "artifactSets.Wanderer's Troupe.count" | "artifactSets.Blizzard Strayer.count" | "artifactSets.Thundering Fury.count" | "artifactSets.Viridescent Venerer.count" | "artifactSets.Noblesse Oblige.count";
+                                        /**
+                                         * Operator
+                                         * @enum {string}
+                                         */
+                                        operator?: "$gte" | "$in" | "$eq";
+                                        /** Value */
+                                        value?: (number | null)[] | number;
+                                    };
+                                }[] | null;
+                                hidden: boolean;
+                                /** Format: uri */
+                                icon: string;
+                                name: string;
+                                rarity: number;
+                                refinement: number;
+                                short: string;
+                                /**
+                                 * Substat
+                                 * @enum {string}
+                                 */
+                                substat: "CRIT DMG" | "CRIT Rate" | "ATK" | "Elemental Mastery" | "HP" | "Energy Recharge" | "Physical DMG Bonus" | "DEF";
+                                teammates: {
+                                    /** Character */
+                                    character: {
+                                        artifactSet: "4x Deepwood Memories" | "4x Viridescent Venerer" | "4x Noblesse Oblige" | "4x Scroll of the Hero of Cinder City" | "4x Instructor" | "4x Tenacity of the Millelith" | "4x Archaic Petra" | "4x Blizzard Strayer" | null;
+                                        /** Format: uri */
+                                        artifactSetIcon: string;
+                                        constellation: number | null;
+                                        /**
+                                         * Element
+                                         * @enum {string}
+                                         */
+                                        element: "Electro" | "Hydro" | "Anemo" | "Dendro" | "Pyro" | "Geo" | "Cryo";
+                                        /** Format: uri */
+                                        icon: string;
+                                        name: string;
+                                        rarity: number;
+                                    };
+                                    /** TeammateWeapon */
+                                    weapon: {
+                                        /** Format: uri */
+                                        icon: string;
+                                        name: string;
+                                        rarity: number;
+                                        refinement: number;
+                                    };
+                                }[];
+                                /**
+                                 * Type
+                                 * @enum {string}
+                                 */
+                                type: "Sword" | "Catalyst" | "Polearm" | "Bow" | "Claymore";
+                            }[];
+                            weaponsCount: number;
+                        }[];
+                        totalRowsHash: string;
+                        ttl: number;
+                    };
+                };
+            };
+        };
+    };
 }
