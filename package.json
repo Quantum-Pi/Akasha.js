@@ -1,6 +1,6 @@
 {
-    "name": "akasha.js",
-    "version": "0.1.2",
+    "name": "akasha-system.js",
+    "version": "0.2.0",
     "description": "API wrapper for akasha.cv",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -20,6 +20,7 @@
         "LICENSE"
     ],
     "keywords": [
+        "Akasha System",
         "Akasha",
         "Genshin",
         "Genshin Impact"
