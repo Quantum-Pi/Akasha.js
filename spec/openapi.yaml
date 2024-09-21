@@ -1607,8 +1607,8 @@ paths:
           in: header
           name: Authorization
           schema:
-            default: Bearer 8dc81u4S3v5TToJKnKaFCviWP4dcZu7X
-            example: Bearer 8dc81u4S3v5TToJKnKaFCviWP4dcZu7X
+            default: Bearer xxx
+            example: Bearer xxx
             type: string
       responses:
         '200':
@@ -1926,8 +1926,8 @@ paths:
           in: header
           name: Authorization
           schema:
-            default: Bearer 8dc81u4S3v5TToJKnKaFCviWP4dcZu7X
-            example: Bearer 8dc81u4S3v5TToJKnKaFCviWP4dcZu7X
+            default: Bearer xxx
+            example: Bearer xxx
             type: string
       responses:
         '200':

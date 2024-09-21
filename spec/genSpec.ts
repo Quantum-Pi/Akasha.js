@@ -39,6 +39,12 @@ import YAML from 'js-yaml'
         }
     }
 
-    writeFileSync('./spec/openapi.yaml', YAML.dump(spec))
-    writeFileSync('./spec/openapi.json', JSON.stringify(spec))
+    writeFileSync(
+        './spec/openapi.yaml',
+        YAML.dump(spec).replace(/Bearer [A-z0-9]*/g, 'Bearer xxx')
+    )
+    writeFileSync(
+        './spec/openapi.json',
+        JSON.stringify(spec).replace(/Bearer [A-z0-9]*/g, 'Bearer xxx')
+    )
 })()
