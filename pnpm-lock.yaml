@@ -20,6 +20,9 @@ importers:
       '@eslint/js':
         specifier: ^9.10.0
         version: 9.10.0
+      '@types/chrome-har-capturer':
+        specifier: ^0.14.0
+        version: 0.14.0
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -253,6 +256,9 @@ packages:
 
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+
+  '@types/chrome-har-capturer@0.14.0':
+    resolution: {integrity: sha512-zqknpW2b8YCj0bK0JolhJYVaP3IYarZKPTlsCKcE1KcWLI521yGfdCZ9nCpAF0zpdOFmU/dtsc2RSrFEj9anfA==}
 
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
@@ -1672,6 +1678,10 @@ snapshots:
   '@tsconfig/node14@1.0.3': {}
 
   '@tsconfig/node16@1.0.4': {}
+
+  '@types/chrome-har-capturer@0.14.0':
+    dependencies:
+      '@types/node': 22.5.4
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
